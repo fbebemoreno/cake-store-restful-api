@@ -1,18 +1,18 @@
 # Cake Store RESTful API
 
-RESTful API ini dibuat dengan menggunakan bahasa pemrograman Golang. RESTful API ini memiliki fitur :
-- Mengambil semua data cakes dan cake satuan dengan ID.
-- Membuat data cake dengan ID.
-- Menghapus data cake dengan ID
+This RESTful API was developed using **Golang** programming language. The features consist of :
+- GET all cakes data and singular cake using ID.
+- CREATE cake data.
+- UPDATE cake data using ID.
+- DELETE cake data using ID.
 
-## Panduan Awal
+## Getting Started
 
-Hal pertama yang perlu dilakukan adalah install Golang. Jika belum, [Klik Disini](https://go.dev/doc/install) untuk mendownload.
+The first thing you need to do is install **Golang**. If you haven't downloaded it yet, [Click Here](https://go.dev/doc/install) to go to **Golang**'s website and download it.
 
-Selanjutnya, jalankan kode ```git clone https://github.com/fbebemoreno/cake-store-restful-api.git```
+After that, run this code on your terminal : ```git clone https://github.com/fbebemoreno/cake-store-restful-api.git```
 
-Perlu diperhatikan pada file `main.go` , masukkan port yang sedang tidak digunakan untuk menjalankan server API. 
-Secara default port yang digunakan adalah `:8080` , dan di file ini diganti dengan `:5000`.
+Keep in mind on `main.go` file, you need to put a port that is currently not in use by any server so you can run API's server. By default, the port in use is `:8080`, and in this file was changed to `:5000`.
 
 ```golang
 func main() {
@@ -21,8 +21,8 @@ func main() {
 }
 ```
 
-Lalu buat **Database** dengan nama `cake_store_restful_api`.
-Nama file dan port server database dapat diganti dengan mengganti kode pada `./models/setup.go` :
+After that, make a **Database** with the name `cake_store_restful_api`.
+You can always change the name and server port of the database by changing it in `./models/setup.go` :
 
 ```golang
 ...
@@ -32,8 +32,8 @@ func ConnectDB() {
 }
 ```
 
-Lakukan `cd cake-store-restful-api` dan jalankan kode `go run main.go`.
+Lastly, run `cd cake-store-restful-api` and run `go run main.go` on your terminal.
 
 ## Notes
 
-Bila mengirim data menggunakan **Postman**, terkadang data `updated_at`, `created_at`, dan `deleted_at` menampilkan data *date* yang sedikit berbeda. Namun pada **Database**, bentuk dan type data sudah sesuai.
+If you're using **Postman** to test this API, sometimes `updated_at`, `created_at`, and `deleted_at` doesn't show the correct date data. Although, in the **Database**, the data type and structure are already correct.
